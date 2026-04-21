@@ -27,7 +27,14 @@ export default function Featured() {
               aria-label={`Open ${project.title} case study`}
             >
               <div className="featured-split-img">
-                <img src={project.cover.src} alt={`${project.title} ${project.titleEm}`} />
+                <video
+                  src="/media/yn8.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
               </div>
 
               <div className="featured-split-info">
