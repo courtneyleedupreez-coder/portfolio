@@ -1,4 +1,4 @@
-import heroImg from '../assets/hero-courtney.png';
+import heroImg from '../assets/hero-courtney-new.jpg';
 
 export default function About() {
   return (

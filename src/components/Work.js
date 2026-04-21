@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { PROJECTS } from './projectsData';
 import Modal from './Modal';
 
-// Asymmetric layout — skip Yonex (it's in Featured)
 const LAYOUT = [
-  { slug: 'lizzard',       className: 'work-card work-card--lg' },
-  { slug: 'match-point',   className: 'work-card work-card--sm' },
-  { slug: 'open-pinamar',  className: 'work-card work-card--md' },
-  { slug: 'skincare',      className: 'work-card work-card--md' },
-  { slug: 'b2b',           className: 'work-card work-card--wide' },
+  { slug: 'yonex',        className: 'work-card' },
+  { slug: 'lizzard',      className: 'work-card' },
+  { slug: 'match-point',  className: 'work-card' },
+  { slug: 'open-pinamar', className: 'work-card' },
+  { slug: 'skincare',     className: 'work-card' },
+  { slug: 'b2b',          className: 'work-card' },
 ];
 
 export default function Work() {
@@ -40,7 +40,7 @@ export default function Work() {
                 aria-label={`Open ${p.title} case study`}
               >
                 <img src={p.cover.src} alt={p.title} />
-                <span className="work-card-num">№ {String(i + 2).padStart(2, '0')}</span>
+                <span className="work-card-num">№ {String(i + 1).padStart(2, '0')}</span>
                 <span className="work-card-tag">{p.year}</span>
                 <div className="work-card-overlay">
                   <h3 className="work-card-title">
