@@ -1,4 +1,10 @@
 /* eslint-disable import/first */
+// ── Project covers
+import coverLizzard from '../assets/cover-lizzard.png';
+import coverMatchPoint from '../assets/cover-match-point.png';
+import coverOpenPinamar from '../assets/cover-open-pinamar.png';
+import coverSkincare from '../assets/cover-skincare.png';
+
 // ── Yonex
 import yn1 from '../assets/yn1.png';
 import yn2 from '../assets/yn2.png';
@@ -96,7 +102,7 @@ export const PROJECTS = [
     scope: 'Photography, photo editing, 8-post campaign',
     tools: 'Canva Pro, Lightroom, Photoroom, iPhone',
     role: 'Photographer + Designer',
-    cover: { type: 'image', src: liz5 },
+    cover: { type: 'image', src: coverLizzard },
     intro:
       'A maximalist product launch for the Lizzard 2026 Tumbler collection. Eight original formats — Tinder swipe card, Breaking News graphic, iMessage social proof — all shot and designed by me, built as a launch toolkit rather than a feed filler.',
     context:
@@ -129,7 +135,7 @@ export const PROJECTS = [
     tools: 'Canva Pro, Figma, Figma Sites, Lightroom',
     role: 'Photographer + Designer + Web',
     website: 'https://dart-plot-13422837.figma.site/',
-    cover: { type: 'image', src: mp1 },
+    cover: { type: 'image', src: coverMatchPoint },
     intro:
       'A full identity for a tennis and pádel club with no prior social presence. On-location photography, dual-tone Lightroom grading, a Canva Pro system and a published Figma website — from zero brand to complete digital presence.',
     context:
@@ -165,7 +171,7 @@ export const PROJECTS = [
     tools: 'Canva Pro, Figma, Figma Sites, Lightroom',
     role: 'Photographer + Designer + Web',
     website: 'https://canon-lapel-04498082.figma.site/',
-    cover: { type: 'image', src: op3 },
+    cover: { type: 'image', src: coverOpenPinamar },
     intro:
       'A speculative brief for a luxury Argentine resort: what a full social presence and website could look like if the brand had committed the budget. All photography shot on location in one day.',
     context:
@@ -201,7 +207,7 @@ export const PROJECTS = [
     scope: 'Art direction, photography direction, 6 launch posts',
     tools: 'Canva Pro, Lightroom, Photoroom',
     role: 'Art Director + Designer',
-    cover: { type: 'image', src: sk4 },
+    cover: { type: 'image', src: coverSkincare },
     intro:
       'Launch campaign for a 4-in-1 facial serum. A deliberate editorial/colour split — B&W duotone for product authority, full colour for lifestyle warmth — designed to earn saves and shares rather than scrolls.',
     context:
