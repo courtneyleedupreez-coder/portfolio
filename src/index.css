@@ -212,6 +212,24 @@ button { font: inherit; border: none; background: none; color: inherit; cursor: 
 }
 .hero-lede em { font-style: italic; color: var(--accent); }
 
+.hero-graphic {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+}
+@media (max-width: 860px) { .hero-graphic { display: none; } }
+
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+/* legacy — keep for safety */
 .hero-right {
   display: flex;
   flex-direction: column;
@@ -794,6 +812,17 @@ button { font: inherit; border: none; background: none; color: inherit; cursor: 
   margin-top: 80px;
 }
 @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.contact-info-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 60px;
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 1px solid var(--rule);
+}
+@media (max-width: 860px) { .contact-info-block { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 560px) { .contact-info-block { grid-template-columns: 1fr; } }
 
 .contact-info-group + .contact-info-group { margin-top: 32px; }
 .contact-info-label { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mute); margin-bottom: 12px; }

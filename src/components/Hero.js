@@ -1,3 +1,5 @@
+import MindGraphic from './MindGraphic';
+
 export default function Hero() {
   return (
     <section className="section hero" id="top">
@@ -31,18 +33,24 @@ export default function Hero() {
           <em>du&nbsp;Preez.</em>
         </h1>
 
-        {/* Lede + CTAs */}
+        {/* Lede + graphic */}
         <div className="hero-sub">
-          <p className="hero-lede reveal">
-            Independent <em>social&nbsp;media &amp; graphic designer</em>. I build content from the camera up — photograph, edit, design, publish — for brands that need their feed to feel considered, not templated.
-          </p>
-          <div className="hero-right reveal">
-            <a href="#work" className="btn btn-primary">
-              View the work <span className="arrow">→</span>
-            </a>
-            <a href="#contact" className="btn btn-ghost">
-              Start a project <span className="arrow">→</span>
-            </a>
+          <div>
+            <p className="hero-lede reveal">
+              Independent <em>social&nbsp;media &amp; graphic designer</em>. I build content from the camera up — photograph, edit, design, publish — for brands that need their feed to feel considered, not templated.
+            </p>
+            <div className="hero-btns reveal">
+              <a href="#work" className="btn btn-primary">
+                View the work <span className="arrow">→</span>
+              </a>
+              <a href="#contact" className="btn btn-ghost">
+                Start a project <span className="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-graphic reveal">
+            <MindGraphic />
           </div>
         </div>
       </div>
