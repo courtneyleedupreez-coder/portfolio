@@ -5,7 +5,7 @@ const STOPS = [
     id: 'sa',
     city: 'Durban',
     country: 'South Africa',
-    years: '2001 – 2023',
+    years: '1998 – 2023',
     tag: 'Origin',
     headline: 'Where the eye was trained.',
     body: 'Born and raised in South Africa. Studied Social Sciences at the University of KwaZulu-Natal — psychology, organisational behaviour, consumer research, brand strategy. The academic foundation that sits under every creative decision.',
