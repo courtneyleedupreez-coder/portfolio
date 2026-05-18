@@ -5,6 +5,7 @@ import Marquee from './components/Marquee';
 import Featured from './components/Featured';
 import Work from './components/Work';
 import About from './components/About';
+import Journey from './components/Journey';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -35,6 +36,7 @@ function App() {
         <Featured />
         <Work />
         <About />
+        <Journey />
         <Contact />
       </main>
       <Footer />

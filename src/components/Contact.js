@@ -4,7 +4,7 @@ export default function Contact() {
       <div className="page">
         <div className="reveal">
           <div className="mono" style={{ marginBottom: '40px', color: 'var(--accent)' }}>
-            Ch. 04 / Contact
+            Ch. 05 / Contact
           </div>
           <h2 className="contact-title">
             Let's make<br />

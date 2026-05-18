@@ -679,6 +679,255 @@ button { font: inherit; border: none; background: none; color: inherit; cursor: 
 .site-card-desc { font-family: var(--ff-ui); font-size: 14px; line-height: 1.7; color: var(--cream); opacity: 0.7; margin-bottom: 20px; }
 .site-card-cta { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
 
+/* ─── JOURNEY ───────────────────────────────────────────── */
+.journey-section { padding-bottom: 100px; }
+
+/* Location timeline */
+.journey-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 56px;
+}
+@media (max-width: 680px) { .journey-track { grid-template-columns: 1fr; } }
+
+.journey-stop {
+  position: relative;
+  background: var(--ink-3);
+  border: none;
+  padding: 32px 28px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+  border-bottom: 2px solid transparent;
+}
+.journey-stop:hover { background: #252520; }
+.journey-stop--active {
+  background: var(--ink-3);
+  border-bottom-color: var(--accent);
+}
+
+.journey-stop-num {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--mute);
+  margin-bottom: 20px;
+}
+.journey-stop--active .journey-stop-num { color: var(--accent); }
+
+.journey-stop-city {
+  font-family: var(--ff-display);
+  font-size: clamp(22px, 2.5vw, 34px);
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.journey-stop--active .journey-stop-city { color: var(--cream); }
+
+.journey-stop-country {
+  font-family: var(--ff-ui);
+  font-size: 12px;
+  color: var(--mute);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+}
+.journey-stop--active .journey-stop-country { color: var(--accent); }
+
+.journey-stop-years {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--mute);
+  letter-spacing: 0.08em;
+}
+
+.journey-live-dot {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #51E28F;
+  animation: pulse 2s infinite;
+}
+
+/* Active detail panel */
+.journey-panel {
+  background: var(--ink-2);
+  padding: 48px 52px;
+  margin-top: 2px;
+  animation: panelIn 0.4s var(--ease) both;
+}
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 680px) { .journey-panel { padding: 32px 24px; } }
+
+.journey-panel-tag {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+.journey-panel-headline {
+  font-family: var(--ff-display);
+  font-size: clamp(24px, 3vw, 42px);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: var(--cream);
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+.journey-panel-body {
+  font-family: var(--ff-ui);
+  font-size: 17px;
+  color: var(--cream-2);
+  line-height: 1.7;
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+.journey-panel-detail {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--mute);
+  text-transform: uppercase;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+
+/* Skill flip cards */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 64px;
+  perspective: 1000px;
+}
+@media (max-width: 860px) { .skill-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .skill-grid { grid-template-columns: 1fr; } }
+
+.skill-card {
+  height: 220px;
+  cursor: default;
+}
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s var(--ease);
+}
+.skill-card:hover .skill-card-inner { transform: rotateY(180deg); }
+
+.skill-card-front,
+.skill-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  padding: 32px 28px;
+  background: var(--ink-3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.skill-card-back {
+  transform: rotateY(180deg);
+  background: var(--accent);
+  justify-content: center;
+}
+
+.skill-card-cat {
+  font-family: var(--ff-display);
+  font-size: clamp(18px, 1.6vw, 24px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  line-height: 1.15;
+}
+.skill-card-hint {
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-top: 12px;
+}
+.skill-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.skill-card-list li {
+  font-family: var(--ff-ui);
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Education callout */
+.edu-callout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 64px;
+  padding: 48px 52px;
+  background: var(--ink-3);
+  border-left: 3px solid var(--accent);
+}
+@media (max-width: 680px) {
+  .edu-callout { grid-template-columns: 1fr; gap: 28px; padding: 32px 24px; }
+}
+
+.edu-label {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.edu-degree {
+  font-family: var(--ff-display);
+  font-size: clamp(22px, 2.5vw, 36px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.edu-school {
+  font-family: var(--ff-ui);
+  font-size: 14px;
+  color: var(--mute);
+  font-weight: 500;
+}
+.edu-years {
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--cream-2);
+  margin-bottom: 20px;
+}
+.edu-focus {
+  font-family: var(--ff-ui);
+  font-size: 15px;
+  color: var(--cream-2);
+  line-height: 1.75;
+  margin: 0;
+}
+
 /* ─── ABOUT ─────────────────────────────────────────────── */
 .about-grid {
   display: grid;

@@ -20,6 +20,7 @@ export default function Nav() {
   const links = [
     ['#work', 'Work'],
     ['#about', 'About'],
+    ['#journey', 'Journey'],
     ['#contact', 'Contact'],
   ];
 
